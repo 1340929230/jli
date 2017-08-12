@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>个人简历</title>
+	<link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+	<div id="pased">
+		<div class="content">
+			<div class="left">
+				<div class="box">
+				  <div class="img img3"><img src="images/logo.jpg" width="200" height="200" alt="头像"></div>
+				  <div class="txt txt3">为了自己，也是为了未来，没有理由不努力</div>
+				</div>
+				<ul id="tabs">
+					<li class="act">基本信息<hr></li>
+					<li>专业技能<hr></li>
+					<li>项目经验<hr></li>
+					<li>联系方式<hr></li>
+				</ul>
+			</div>
+			<div class="right" id="sects">
+				<section id="one" class="show">
+					<h3>基本信息<span>Basic info</span></h3>
+					<ul>
+						<li><span class="lei">姓名：</span>崔晓东 / 男 / 20</li>
+						<li><span class="lei">民族：</span>汉族</li>
+						<li><span class="lei">专业：</span>计算机信息管理</li>
+						<li><span class="lei">毕业院校：</span>河北软件职业技术学院</li>
+						<li><span class="lei">应聘岗位：</span>前端工程师</li>
+						<li><span class="lei">爱好：</span>喜欢泡开发论坛等</li>
+					</ul>
+				</section>
+				<section id="two">
+					<h3>专业技能<span>Skill</span></h3>
+					<p>精通Web前端技术，熟练使用HTML5和CSS3能够精确还原设计图，高质量高效率制作符合w3c标准的网站页面，熟悉运用Javascript以及Bootstrap、jQuery实现网站常用JS特效，且具备一定的CMS建站基础。</p>
+					<p>深刻理解Web标准，对其有实际的了解和充足的实践经验，能够根据需求，以最优的前端技术解决方案。</p>
+				</section>
+				<section id="three">
+					<h3>项目经验<span>Experience</span></h3>
+					<div id="progressBar">
+					      <!-- 进度条 -->
+					      <div>
+					        <span></span>
+					      </div>
+					      <!-- 五个圆 -->
+					      <span></span>
+					      <span></span>
+					      <span></span>
+					      <span></span>
+					      <span></span>
+					</div>
+					<div id="cent">
+						<a href="#">鑫昌发拉链有限公司</a>
+						<p>主要是使用HTML标记、div+css+javascript Dom操作等前端技术进行网站的开发与制造。</p>
+					</div>
+					<div id="cfnt">
+						<a href="#">凤凰体育</a>
+						<p>充分地利用了div盒子模型做出了规格化的单页模型，使用javascript展示一些小型特效，继而完成了网站的制作。</p>
+					</div>
+				</section>
+				<section id="four">
+					<h3>联系方式<span>Contact</span></h3>
+					<ul>
+						<li><span class="lei">QQ:</span>1340929230</li>
+						<li><span class="lei">Tel:</span>15076662568</li>
+						<li><span class="lei">微信：</span>dong971121</li>
+						<li><span class="lei">邮箱：</span>qinbaozi_1121@163.com</li>
+					</ul>
+				</section>
+			</div>
+		</div>
+	</div>
+  <script>
+	var tabs=document.getElementById('tabs');//获取所需的元素
+	var sects=document.getElementById('sects');
+	var btns=tabs.getElementsByTagName('li');// 所有按钮
+	var secs=sects.getElementsByTagName('section');//所有div
+	for(var i=0;i<btns.length;i++){//通过循环设置每个按钮
+		btns[i].index=i;//给每个按钮添加自定义属性index
+		btns[i].onclick=function (){// 给每个按钮设置onclick事件
+			for(var i=0; i<btns.length;i++){//通过循环将全部选项class清空————全清
+				btns[i].className='';
+				secs[i].className='';
+			}//单独设置当前项class————单设
+			this.className='act';//当前选中的选项卡激活
+			secs[this.index].className='show';//当前选中的选项卡所对应的div显示
+		}
+	}
+	</script>
+</body>
+</html>
